@@ -1,2 +1,2 @@
-# crawlly
-A Go app to download top articles as PDF from Google
+# Kumo
+A Go CLI
