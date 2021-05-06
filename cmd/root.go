@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 
+	googlesearch "github.com/rocketlaunchr/google-search"
 	"github.com/spf13/cobra"
 
 	homedir "github.com/mitchellh/go-homedir"
@@ -21,7 +22,9 @@ var rootCmd = &cobra.Command{
 	Long: `Kumo is a Simple CLI at its core. Just type what you wanna google and get 
 	the files as HTML in your downloads folder`,
 
-	Run: func(cmd *cobra.Command, args []string) {},
+	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println(googlesearch.Search(nil, "whats the weather"))
+	},
 }
 
 func Execute() {
