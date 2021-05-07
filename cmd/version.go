@@ -28,6 +28,7 @@ var versionCmd = &cobra.Command{
 }
 
 func init() {
+	rootCmd.AddCommand(versionCmd)
 	flags := versionCmd.Flags()
 	flags.BoolVar(&beta, "beta", true, "Tells beta version")
 	flags.BoolVar(&beta, "release", false, "Tells release version")

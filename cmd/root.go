@@ -3,7 +3,6 @@ package cmd
 import (
 	"fmt"
 
-	googlesearch "github.com/rocketlaunchr/google-search"
 	"github.com/spf13/cobra"
 
 	homedir "github.com/mitchellh/go-homedir"
@@ -23,7 +22,6 @@ var rootCmd = &cobra.Command{
 	the files as HTML in your downloads folder`,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(googlesearch.Search(nil, "whats the weather"))
 	},
 }
 
@@ -33,7 +31,6 @@ func Execute() {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-	rootCmd.AddCommand(versionCmd)
 }
 
 func initConfig() {
