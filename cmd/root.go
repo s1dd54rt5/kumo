@@ -11,6 +11,7 @@ import (
 
 type Config struct {
 	KumoPath string
+	Search   int
 }
 
 var config Config

@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/anaskhan96/soup"
+	"github.com/bharath-srinivas/termloader"
 	googlesearch "github.com/rocketlaunchr/google-search"
 	"github.com/spf13/cobra"
 )
@@ -18,7 +19,7 @@ var searchCmd = &cobra.Command{
 	Long:  `This command will search the web and put the HTML files in a path of your choice.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		opts := &googlesearch.SearchOptions{
-			Limit: 3,
+			Limit: config.Search,
 		}
 		var wg sync.WaitGroup
 		results, err := googlesearch.Search(cmd.Context(), strings.Join(args[:], " "), *opts)
@@ -30,7 +31,11 @@ var searchCmd = &cobra.Command{
 			getSite(s, &wg)
 		}
 		wg.Wait()
-		time.Sleep(12 * time.Second)
+		loader := termloader.New(termloader.CharsetConfigs["default"])
+		loader.Text = "Loading ..."
+		loader.Start()
+		time.Sleep(time.Duration(config.Search) * 4 * time.Second)
+		loader.Stop()
 		fmt.Println("DONE!")
 	},
 }
