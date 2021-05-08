@@ -16,10 +16,12 @@ search: 2
 ```
 - cd into the Kumo folder and run the following command
 ```
-go install github.com/44t4nk1/kumo
+$ go install github.com/44t4nk1/kumo
 ``` 
 - And you are all set! You can start using Kumo from your terminal now
 
 ## Use
-- kumo search binary search tree
+```
+$ kumo search binary search tree
+```
 - Will put the HTML pages for the search in the path you mentioned.
