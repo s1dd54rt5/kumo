@@ -5,6 +5,7 @@ A CLI made in Go to fetch HTML pages from the internet.
 ## Features
 - Set custom path to store all your searched files
 - Set the amount of files you want to fetch from one search
+- With the list flag you can search specific links to download
 
 ## Setup
 - Have Go installed in your system
@@ -23,5 +24,6 @@ $ go install github.com/44t4nk1/kumo
 ## Use
 ```
 $ kumo search binary search tree
+$ kumo search --list binary search tree
 ```
 - Will put the HTML pages for the search in the path you mentioned.
