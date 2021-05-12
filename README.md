@@ -1,5 +1,5 @@
 ![alt text](./screenshots/kumo-01.png)
-# Kumo
+# KumoCLI
 A CLI made in Go to fetch HTML pages from the internet.
 
 ## Features
