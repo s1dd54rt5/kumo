@@ -1,6 +1,6 @@
 ![alt text](./screenshots/kumo-01.png)
 # Kumo CLI
-A CLI made in Go to fetch HTML pages from the internet.
+A CLI made in Go to fetch HTML pages from the internet!
 
 ## Features
 - Set custom path to store all your searched files
